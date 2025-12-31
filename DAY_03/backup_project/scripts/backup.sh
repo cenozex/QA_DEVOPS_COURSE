@@ -28,5 +28,16 @@ else
 fi
 
 
+# ===== ROTATION MODULE =====
+BACKUP_FILES=("$BACKUP_DIR"/backup_*.sql.gz)
+FILE_COUNT=${#BACKUP_FILES[@]}
+
+if [ "$FILE_COUNT" -le "$RETENTION_COUNT" ]; then
+    echo "$(date +"%Y-%m-%d %H:%M:%S") No rotation needed. Total backups: $FILE_COUNT" >> "$LOG_FILE"
+else
+    FILES_TO_DELETE=$((FILE_COUNT - RETENTION_COUNT))
+    echo "$(date +"%Y-%m-%d %H:%M:%S") Rotating $FILES_TO_DELETE old backup(s)" >> "$LOG_FILE"
+
+
 
 
