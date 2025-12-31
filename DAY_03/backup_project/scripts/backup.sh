@@ -10,3 +10,14 @@ RETENTION_COUNT=5
 DB_NAME="practiceDB"
 
 
+
+# Ensure backup and log directories exist
+mkdir -p "$BACKUP_DIR"
+mkdir -p "$(dirname "$LOG_FILE")"
+
+# ===== TIMESTAMP & FILENAME =====
+TIMESTAMP=$(date +"%Y_%m_%d_%H_%M")
+BACKUP_FILE="$BACKUP_DIR/backup_$TIMESTAMP.sql.gz"
+
+
+
