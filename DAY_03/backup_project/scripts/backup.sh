@@ -40,4 +40,9 @@ else
 
 
 
-
+# Delete the oldest backups
+    for FILE in $(ls -1t "$BACKUP_DIR"/backup_*.sql.gz | tail -n "$FILES_TO_DELETE"); do
+        rm -f "$FILE"
+        echo "$(date +"%Y-%m-%d %H:%M:%S") Deleted old backup: $FILE" >> "$LOG_FILE"
+    done
+fi
