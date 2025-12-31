@@ -20,4 +20,13 @@ TIMESTAMP=$(date +"%Y_%m_%d_%H_%M")
 BACKUP_FILE="$BACKUP_DIR/backup_$TIMESTAMP.sql.gz"
 
 
+# ===== BACKUP MODULE =====
+if pg_dump "$DB_NAME" | gzip > "$BACKUP_FILE"; then
+    echo "$(date +"%Y-%m-%d %H:%M:%S") Backup successful: $BACKUP_FILE" >> "$LOG_FILE"
+else
+    echo "$(date +"%Y-%m-%d %H:%M:%S") Backup FAILED for database: $DB_NAME" >> "$LOG_FILE"
+fi
+
+
+
 
