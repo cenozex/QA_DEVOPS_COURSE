@@ -48,10 +48,14 @@ export PGPASSFILE="$HOME/.pgpass"
 
 
 # ===== BACKUP MODULE =====
-if pg_dump "$DB_NAME" | gzip > "$BACKUP_FILE"; then
-    echo "$(date +"%Y-%m-%d %H:%M:%S") Backup successful: $BACKUP_FILE" >> "$LOG_FILE"
+if "$PG_DUMP" -h "$DB_HOST" -p "$DB_PORT" -U "$DB_USER" "$DB_NAME" | gzip > "$BACKUP_FILE"; then
+    FILE_SIZE=$(du -h "$BACKUP_FILE" | awk '{print $1}')
+    echo "$(date +"%F %T") Backup successful: $BACKUP_FILE (Size: $FILE_SIZE)" >> "$LOG_FILE"
 else
-    echo "$(date +"%Y-%m-%d %H:%M:%S") Backup FAILED for database: $DB_NAME" >> "$LOG_FILE"
+    echo "$(date +"%F %T") Backup FAILED for database: $DB_NAME" >> "$LOG_FILE"
+    rm -f "$BACKUP_FILE"
+    rm -f "$LOCKFILE"
+    exit 1
 fi
 
 
