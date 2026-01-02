@@ -6,9 +6,9 @@ echo "--------------CENOZEX--"
 # -----------------------------
 # Config: API credentials & URL
 # -----------------------------
-API_URL="http://192.168.31.198:3000"
-USERNAME="test123"
-PASSWORD="password@123"
+API_URL="enter_your_url" #enter the api url 
+USERNAME="enter_username"
+PASSWORD="enter_password"
 
 # -----------------------------
 # Step 1: Register user

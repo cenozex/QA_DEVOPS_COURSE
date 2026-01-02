@@ -6,3 +6,5 @@ in case of accidental disaster which is based on real world DevOps project.
 # Rotation system and deletion in backup
  -> If there is more no of backup file than retention count then it will filter the newest and oldest file
     and delete the oldest file preventing the server/system crash.
+ 
+ -> The first step is manual as you have to change the configuration according to your details and set the cronjobs by removing the # for automation .
