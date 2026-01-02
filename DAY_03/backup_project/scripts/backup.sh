@@ -35,6 +35,18 @@ TIMESTAMP=$(date +"%Y_%m_%d_%H_%M")
 BACKUP_FILE="$BACKUP_DIR/backup_$TIMESTAMP.sql.gz"
 
 
+# ===== START BACKUP =====
+echo "$(date +"%F %T") Starting backup of $DB_NAME..." >> "$LOG_FILE"
+
+
+# Ensure password-less authentication using ~/.pgpass
+# Format of ~/.pgpass:
+#This makes us easy to backup without manually writing password again and again which is best for cronjob
+# remove the # below to configure for manual password authentication for DB
+# hostname:port:database_name:database_username:database_password
+export PGPASSFILE="$HOME/.pgpass"
+
+
 # ===== BACKUP MODULE =====
 if pg_dump "$DB_NAME" | gzip > "$BACKUP_FILE"; then
     echo "$(date +"%Y-%m-%d %H:%M:%S") Backup successful: $BACKUP_FILE" >> "$LOG_FILE"

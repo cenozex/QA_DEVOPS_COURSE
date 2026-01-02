@@ -34,3 +34,8 @@
 2026-01-02 14:35:03 Rotating 1 old backup(s)
 2026-01-02 14:35:03 Deleted old backup: /home/cenozex67/QA-DEVOPS_COURSE/DAY_03/backup_project/backups/backup_2026_01_02_14_02.sql.gz
 2026-01-02 14:35:03 Backup script finished.
+2026-01-02 16:00:01 Starting backup of practiceDB...
+2026-01-02 16:00:01 Backup successful: /home/cenozex67/QA-DEVOPS_COURSE/DAY_03/backup_project/backups/backup_2026_01_02_16_00.sql.gz
+2026-01-02 16:00:01 Rotating 1 old backup(s)
+2026-01-02 16:00:01 Deleted old backup: /home/cenozex67/QA-DEVOPS_COURSE/DAY_03/backup_project/backups/backup_2026_01_02_14_06.sql.gz
+2026-01-02 17:00:01 Backup already running, exiting.
