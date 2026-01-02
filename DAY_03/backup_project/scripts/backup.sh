@@ -8,11 +8,11 @@ BACKUP_DIR="/home/cenozex67/QA-DEVOPS_COURSE/DAY_03/backup_project/backups"
 LOG_FILE="/home/cenozex67/QA-DEVOPS_COURSE/DAY_03/backup_project/logs/backup.log"
 RETENTION_COUNT=5
 
-DB_NAME="practiceDB"
-DB_HOST="192.168.31.198"      # hostname where it is hosted/IP
-DB_PORT="5432"                 # PostgreSQL default port
-DB_USER="postgres"             # PostgreSQL user
-PG_DUMP="/usr/bin/pg_dump"     # absolute path to pg_dump for cronjob for automation
+DB_NAME="your_database_name"
+DB_HOST="ip/address"      # hostname where it is hosted/IP
+DB_PORT="portno"                 # PostgreSQL default port 5432
+DB_USER="your_db_user"             # PostgreSQL user
+PG_DUMP="absoultepath_to_pgdump"     # absolute path to pg_dump for cronjob for automation default : /usr/bin/pg_dump
 
 
 # ===== LOCK FILE TO PREVENT MULTIPLE RUNS =====
@@ -78,9 +78,13 @@ else
 fi
 
 
-# Delete the oldest backups
-    for FILE in $(ls -1t "$BACKUP_DIR"/backup_*.sql.gz | tail -n "$FILES_TO_DELETE"); do
-        rm -f "$FILE"
-        echo "$(date +"%Y-%m-%d %H:%M:%S") Deleted old backup: $FILE" >> "$LOG_FILE"
-    done
-fi
+# ===== CLEANUP LOCK FILE =====
+rm -f "$LOCKFILE"
+echo "$(date +"%F %T") Backup script finished." >> "$LOG_FILE"
+
+
+
+
+# ===== CRON EXAMPLE (Add this line via `crontab -e`) =====
+#======To check if it is added or not run 'crontab -l'=====
+# Run hourly: 0 * * * * /home/$user/fullpath || Absoulte path is must for cron(Automation)
