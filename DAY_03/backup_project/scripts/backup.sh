@@ -64,11 +64,18 @@ BACKUP_FILES=("$BACKUP_DIR"/backup_*.sql.gz)
 FILE_COUNT=${#BACKUP_FILES[@]}
 
 if [ "$FILE_COUNT" -le "$RETENTION_COUNT" ]; then
-    echo "$(date +"%Y-%m-%d %H:%M:%S") No rotation needed. Total backups: $FILE_COUNT" >> "$LOG_FILE"
+    echo "$(date +"%F %T") No rotation needed. Total backups: $FILE_COUNT" >> "$LOG_FILE"
 else
     FILES_TO_DELETE=$((FILE_COUNT - RETENTION_COUNT))
-    echo "$(date +"%Y-%m-%d %H:%M:%S") Rotating $FILES_TO_DELETE old backup(s)" >> "$LOG_FILE"
+    echo "$(date +"%F %T") Rotating $FILES_TO_DELETE old backup(s)" >> "$LOG_FILE"
 
+    # Safely handle spaces in filenames
+    mapfile -t FILES_TO_DELETE_LIST < <(ls -1t "$BACKUP_DIR"/backup_*.sql.gz | tail -n "$FILES_TO_DELETE")
+    for FILE in "${FILES_TO_DELETE_LIST[@]}"; do
+        rm -f "$FILE"
+        echo "$(date +"%F %T") Deleted old backup: $FILE" >> "$LOG_FILE"
+    done
+fi
 
 
 # Delete the oldest backups
