@@ -7,7 +7,22 @@ echo "------------CENOZEX--------"
 BACKUP_DIR="/home/cenozex67/QA-DEVOPS_COURSE/DAY_03/backup_project/backups"
 LOG_FILE="/home/cenozex67/QA-DEVOPS_COURSE/DAY_03/backup_project/logs/backup.log"
 RETENTION_COUNT=5
+
 DB_NAME="practiceDB"
+DB_HOST="192.168.31.198"      # hostname where it is hosted/IP
+DB_PORT="5432"                 # PostgreSQL default port
+DB_USER="postgres"             # PostgreSQL user
+PG_DUMP="/usr/bin/pg_dump"     # absolute path to pg_dump for cronjob for automation
+
+
+# ===== LOCK FILE TO PREVENT MULTIPLE RUNS =====
+LOCKFILE="/tmp/db_backup.lock"
+if [ -e "$LOCKFILE" ]; then
+    echo "$(date +"%F %T") Backup already running, exiting." >> "$LOG_FILE"
+    exit 1
+fi
+touch "$LOCKFILE"
+
 
 
 
