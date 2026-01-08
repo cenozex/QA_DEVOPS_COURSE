@@ -88,3 +88,13 @@
 2026-01-08 15:00:01 Rotating 1 old backup(s)
 2026-01-08 15:00:01 Deleted old backup: /home/cenozex67/QA-DEVOPS_COURSE/DAY_03/backup_project/backups/backup_2026_01_07_14_00.sql.gz
 2026-01-08 15:00:01 Backup script finished.
+2026-01-08 16:00:01 Starting backup of your_database_name...
+2026-01-08 16:00:01 Backup successful: /home/cenozex67/QA-DEVOPS_COURSE/DAY_03/backup_project/backups/backup_2026_01_08_16_00.sql.gz (Size: 4.0K)
+2026-01-08 16:00:01 Rotating 1 old backup(s)
+2026-01-08 16:00:01 Deleted old backup: /home/cenozex67/QA-DEVOPS_COURSE/DAY_03/backup_project/backups/backup_2026_01_07_15_00.sql.gz
+2026-01-08 16:00:01 Backup script finished.
+2026-01-08 17:00:01 Starting backup of your_database_name...
+2026-01-08 17:00:01 Backup successful: /home/cenozex67/QA-DEVOPS_COURSE/DAY_03/backup_project/backups/backup_2026_01_08_17_00.sql.gz (Size: 4.0K)
+2026-01-08 17:00:01 Rotating 1 old backup(s)
+2026-01-08 17:00:01 Deleted old backup: /home/cenozex67/QA-DEVOPS_COURSE/DAY_03/backup_project/backups/backup_2026_01_07_16_00.sql.gz
+2026-01-08 17:00:01 Backup script finished.

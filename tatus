@@ -1,0 +1,120 @@
+[33mcommit a13093097e7e7c6578ec2d1e0f86e7f966a9d049[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Merge: e59158c 116d43e
+Author: cenozex <saugatsiwakoti0925@gmail.com>
+Date:   Thu Jan 8 15:22:42 2026 +0545
+
+    Merge branch 'main' of https://github.com/cenozex/QA_DEVOPS_COURSE
+
+[33mcommit e59158ceb7531b7ddccd7889f1932bb63fbfa146[m
+Author: cenozex <saugatsiwakoti0925@gmail.com>
+Date:   Thu Jan 8 15:16:38 2026 +0545
+
+    after the workflow test
+
+[33mcommit 116d43e038bbc02532f1b6320d8bd5724402d705[m
+Author: Saugat Siwakoti <93928312+cenozex@users.noreply.github.com>
+Date:   Thu Jan 8 15:04:34 2026 +0545
+
+    First workflow
+
+[33mcommit b79b8f870cb80a0a403a16961e0b517766e5d20c[m
+Author: cenozex <saugatsiwakoti0925@gmail.com>
+Date:   Fri Jan 2 17:29:47 2026 +0545
+
+    changes in authentication and helloscript
+
+[33mcommit 8fe19d1674152c3e21c5be71cb210727f6f77537[m
+Author: cenozex <saugatsiwakoti0925@gmail.com>
+Date:   Fri Jan 2 17:23:35 2026 +0545
+
+    Completed and additional update or features will be added later
+
+[33mcommit b839dc6fa1f0b97346cd69654ce087d4cfdba19b[m
+Author: cenozex <saugatsiwakoti0925@gmail.com>
+Date:   Fri Jan 2 17:13:45 2026 +0545
+
+    Updated Rotation Module
+
+[33mcommit be13c2f2ed85f70879c8692cad591aa75b1f277b[m
+Author: cenozex <saugatsiwakoti0925@gmail.com>
+Date:   Fri Jan 2 17:13:00 2026 +0545
+
+    Updated backup module configured for pgpass
+
+[33mcommit 3722363d2da1a2cba05b4e0c474b7bb70feb18c0[m
+Author: cenozex <saugatsiwakoti0925@gmail.com>
+Date:   Fri Jan 2 17:11:40 2026 +0545
+
+    Configured automatic authentication for database using .pgpass
+
+[33mcommit 22177d65ed60233aa84667f53c09822d9a562f05[m
+Author: cenozex <saugatsiwakoti0925@gmail.com>
+Date:   Fri Jan 2 15:34:32 2026 +0545
+
+    Added DB details for remote backup function
+
+[33mcommit a386c45ab1432a0edbb8e78c3d4d8c9ce7a26c4c[m
+Author: cenozex <saugatsiwakoti0925@gmail.com>
+Date:   Wed Dec 31 17:06:56 2025 +0545
+
+    Added description in README.md
+
+[33mcommit 93fb5705fb6fb312a38361259254c653d978f1bc[m
+Author: cenozex <saugatsiwakoti0925@gmail.com>
+Date:   Wed Dec 31 16:56:42 2025 +0545
+
+    completed delete module
+
+[33mcommit e015a578cb57d0a39bb7c57d2de8c9f3320e76d2[m
+Author: cenozex <saugatsiwakoti0925@gmail.com>
+Date:   Wed Dec 31 16:55:59 2025 +0545
+
+    added a rotation module which counts if the no of backup file is greater than retention and if it is greater than it will delete the old backup file
+
+[33mcommit 218a98cf9e61765bc8a622ba0b279215bd42a8a0[m
+Author: cenozex <saugatsiwakoti0925@gmail.com>
+Date:   Wed Dec 31 16:54:03 2025 +0545
+
+    created a backup module using pg_dump and compressed it using gzip
+
+[33mcommit 0675db93aca2cd5696b41ab2374621c3214b8c76[m
+Author: cenozex <saugatsiwakoti0925@gmail.com>
+Date:   Wed Dec 31 16:10:29 2025 +0545
+
+    added timestamp
+
+[33mcommit e8baad8c9601b37c7070ad820e3753ca66aea7ba[m
+Author: cenozex <saugatsiwakoti0925@gmail.com>
+Date:   Wed Dec 31 16:07:10 2025 +0545
+
+    started a new backup project with folder structure and finished the config part in script
+
+[33mcommit f6c954cd72a5acdd26c8e31cb9e49fe60b3648dd[m
+Author: cenozex <saugatsiwakoti0925@gmail.com>
+Date:   Tue Dec 30 16:33:53 2025 +0545
+
+    Learned about authentication and created a simple bash script for testing the authentication
+
+[33mcommit a20580efd39d2846005204c91e8680a11ed993fd[m
+Author: cenozex <saugatsiwakoti0925@gmail.com>
+Date:   Mon Dec 29 20:37:33 2025 +0545
+
+    Learned about bash scripting and made a simple script with logs
+
+[33mcommit 0764a850f90db7e56e910a4cf8867fc31f48d570[m
+Author: cenozex <saugatsiwakoti0925@gmail.com>
+Date:   Tue Dec 23 23:28:20 2025 +0545
+
+    Completed Day 2 Lessons
+
+[33mcommit 8abeb0981c7d13825cc4d3111082c7fc8dcfe296[m[33m ([m[1;32mfeature-logging[m[33m)[m
+Author: cenozex <saugatsiwakoti0925@gmail.com>
+Date:   Tue Dec 23 22:51:51 2025 +0545
+
+    Add debug start message
+
+[33mcommit cd8cc73dda057842e05d4a09d84cf344be20c951[m
+Author: cenozex <saugatsiwakoti0925@gmail.com>
+Date:   Tue Dec 23 22:38:21 2025 +0545
+
+    Initial commit : Add Day 01 Linux Fundamnetals and logs
