@@ -1,0 +1,19 @@
+name: First Workflow
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  hello-jobs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Say hello"
+        run: echo "HI this is from Github Actions"
+
+      - name: "Hello again van"
+        run: echo "K xa hau ? samchai? "
+
+      - name: "Show date"
+        run: date
