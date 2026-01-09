@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: "Checkout Repo"
+        uses: actions/checkout@v6.0.1
       - name: "Say hello"
         run: echo "HI this is from Github Actions"
 
